@@ -369,7 +369,7 @@ class SubsystemSolver(SubsystemParam):
     async def solver(self,websocket, path):
         
         # 数据库连接
-        rs = redis.StrictRedis(host='172.18.0.1',port=6379,db=2,password="chlpw1039") 
+        rs = redis.StrictRedis(host='172.18.0.1',port=6379,db=2,password="") 
         # 数据库标志该子系统已连接
         rs.mset({f'Subsystem{self.cav_id}_connect':pickle.dumps(1)})
 
